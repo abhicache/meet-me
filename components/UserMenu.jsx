@@ -1,4 +1,7 @@
+"use client";
+
 import { UserButton } from '@clerk/nextjs';
+import { ChartNoAxesGantt } from 'lucide-react';
 import React from 'react'
 
 const UserMenu = () => {
@@ -9,6 +12,15 @@ const UserMenu = () => {
       }
 
   }}>
+    <UserButton.MenuItems>
+      <UserButton.Link
+        label='My Events'
+        labelIcon={<ChartNoAxesGantt size={18} />}
+        href='/events'
+      />
+      {/* changing the position of manage accout  */}
+      <UserButton.Action label='manageAccount'  /> 
+    </UserButton.MenuItems>
 
   </UserButton>
   );
