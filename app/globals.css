@@ -8,6 +8,9 @@
   .text-balance {
     text-wrap: balance;
   }
+  .gradient-title {
+    @apply bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 text-transparent bg-clip-text tracking-tighter pb-4 pr-2;
+  }
 }
 
 @layer base {

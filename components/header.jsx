@@ -7,7 +7,7 @@ import UserMenu from "./UserMenu";
 
 const Header = () => {
   return (
-    <nav className="mx-auto py-2 px-4 flex justify-between items-center shadow-md border-b-2">
+    <nav className="mx-auto py-2 px-4 flex justify-between items-center shadow-md border-b-2 bg-white">
       <Link href="/" className="flex items-center">
         <Image
           src="/logo.png"
@@ -20,7 +20,7 @@ const Header = () => {
 
       <div className="flex items-center gap-4">
         <Link href="/events?create=true">
-          <Button className="flex items-center gap-2">
+          <Button className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-purple-500 text-white hover:from-purple-500 hover:to-orange-500">
             <PenBox size={18} />
             Create Event
           </Button>
@@ -28,7 +28,9 @@ const Header = () => {
 
         <SignedOut>
           <SignInButton forceRedirectUrl="/dashboard">
-            <Button variant="outline">Sign In</Button>
+            <Button variant="outline">
+              Sign In
+            </Button>
           </SignInButton>
         </SignedOut>
 
