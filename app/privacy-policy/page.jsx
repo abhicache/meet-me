@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
       
       <div className="bg-gray-50 p-6 rounded-lg shadow-md">
         <p className="mb-6">
-          MeetMe ("we," "our," "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our service.
+          MeetMe (&quot;we,&quot; &quot;our,&quot; &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our service.
         </p>
 
         <Section title="1. Information We Collect">
@@ -106,7 +106,7 @@ const PrivacyPolicy = () => {
             If you have any questions or concerns about this Privacy Policy or how we handle your information, please contact us at:
           </p>
           <p className="mt-2">
-            Email: baranwalabhishek21@gmail.com<br />
+            Email: baranwalabhishek21@gmail.com <br />
           </p>
         </Section>
       </div>
