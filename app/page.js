@@ -35,7 +35,7 @@ const features = [
 
 const howItWorks = [
   {
-    step: "Get Started",
+    step: "Sign Up",
     description:
       "Create your free MeetMe account—you're just a few clicks away from simplified scheduling.",
   },
@@ -58,6 +58,7 @@ const howItWorks = [
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-16">
+      {/* hero section */}
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mb-24">
         <div className="lg:w-1/2">
           <h1 className="text-7xl font-extrabold pb-4 gradient-title">
@@ -71,10 +72,18 @@ export default function Home() {
             TLDR: MeetMe makes scheduling smarter, faster, and stress-free :)
           </p>
           <Link href="/dashboard">
-            <Button size="lg" className="text-md">
-              Get Started <ArrowRight className="ml-2 w-5" />
+            <Button
+              size="lg"
+              variant="primary"
+              className="bg-black hover:bg-gray-700 text-white font-semibold px-6 py-3 rounded-full flex items-center shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+            >
+              Get Started for Free
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
+          <p className="text-xs mt-3 opacity-75">
+            No credit card required. Cancel anytime.
+          </p>
         </div>
         <div className="lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-md aspect-square">
@@ -88,14 +97,15 @@ export default function Home() {
         </div>
       </div>
 
+      {/* features section */}
       <div className="mb-24">
         <h2 className="text-3xl font-bold text-center mb-10 text-purple-500">
-          Why You’ll Love MeetMe
+          Why you’ll love MeetMe?
         </h2>
         <div className="grid grid-col-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => {
             return (
-              <Card key={index}>
+              <Card key={index} className="shadow-lg transform transition-all hover:scale-105 hover:shadow-xl duration-200 ease-out">
                 <CardHeader>
                   <feature.icon className="w-12 h-12 text-purple-500 mb-4 mx-auto" />
                   <CardTitle className="text-center text-purple-600">
@@ -113,15 +123,9 @@ export default function Home() {
         </div>
       </div>
 
+      {/* working steps section */}
       <div className="mb-24">
         <h2 className="text-3xl font-bold text-center mb-10 text-purple-500">
-          What People Are Saying
-        </h2>
-        <Testimonials />
-      </div>
-
-      <div className="mb-24">
-        <h2 className="text-3xl font-bold text-center mb-10 text-purple-600">
           Getting Started is a Breeze
         </h2>
         <div className="relative grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 max-w-5xl mx-auto">
@@ -131,7 +135,6 @@ export default function Home() {
               className="relative p-6 rounded-lg shadow-lg bg-white transform transition-all hover:scale-105 hover:shadow-xl duration-200 ease-out"
             >
               <div className="flex flex-col items-center">
-
                 <div className="bg-gradient-to-r from-blue-400 to-purple-400 rounded-full w-14 h-14 flex items-center justify-center mb-4">
                   <span className="text-white font-bold text-lg">
                     {index + 1}
@@ -154,6 +157,15 @@ export default function Home() {
         </div>
       </div>
 
+      {/* testimonial section */}
+      <div className="mb-24">
+        <h2 className="text-3xl font-bold text-center mb-10 text-purple-500">
+          What People Are Saying
+        </h2>
+        <Testimonials />
+      </div>
+
+      {/* cta div */}
       <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg p-8 text-center shadow-lg">
         <h2 className="text-3xl font-bold mb-3">
           Take Control of Your Schedule Today

@@ -57,36 +57,45 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-    return (
-      <div className="my-12">
-        <Carousel
-          plugins={[Autoplay({ delay: 2000 })]}
-          className="w-full mx-auto"
-        >
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-2/5 p-4">
-                <Card className="h-full shadow-lg border rounded-lg transition-transform transform hover:scale-105">
-                  <CardContent className="flex flex-col items-center text-center p-6 space-y-4">
-                    <Avatar className="h-16 w-16 mb-4">
-                      <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                      <AvatarFallback>
-                        {testimonial.name.split(" ").map((n) => n[0]).join("")}
-                      </AvatarFallback>
-                    </Avatar>
-                    <blockquote className="text-gray-600 italic">&quot;{testimonial.content}&quot;</blockquote>
-                    <div className="mt-4">
-                      <h4 className="text-lg font-semibold text-gray-800">{testimonial.name}</h4>
-                      <p className="text-sm text-purple-600">{testimonial.role}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
-    );
-  };
+  return (
+    <Carousel
+      plugins={[
+        Autoplay({
+          delay: 2500,
+        }),
+      ]}
+      className="w-full mx-auto"
+    >
+      <CarouselContent>
+        {testimonials.map((testimonial, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-2/5 p-4">
+            <Card className="h-full shadow-lg border rounded-lg transition-transform transform hover:scale-105 duration-200 ease-out">
+              <CardContent className="flex flex-col items-center text-center p-6">
+                <Avatar className="h-16 w-16 mb-4">
+                  <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                  <AvatarFallback>
+                    {testimonial.name
+                      .split(" ")
+                      .map((n) => n[0])
+                      .join("")}
+                  </AvatarFallback>
+                </Avatar>
+                <p className="text-gray-700 text-center italic">
+                  &quot;{testimonial.content}&quot;
+                </p>
+                <div className="mt-4">
+                  <h4 className="text-lg font-semibold text-gray-800">
+                    {testimonial.name}
+                  </h4>
+                  <p className="text-sm text-purple-600">{testimonial.role}</p>
+                </div>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
+  );
+};
 
 export default Testimonials;
