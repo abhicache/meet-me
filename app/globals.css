@@ -69,6 +69,25 @@
   }
 }
 
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(185, 107, 39, 0.652);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color:transparent 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(123, 25, 25, 0.5);
+}
+
+
 @layer base {
   * {
     @apply border-border;
@@ -77,3 +96,4 @@
     @apply bg-background text-foreground;
   }
 }
+
