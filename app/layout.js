@@ -41,14 +41,14 @@ export default function RootLayout({ children }) {
               {/* Social Media Icons */}
               <div className="flex space-x-4 mt-4 md:mt-0">
                 <a
-                  href="https://linkedin.com/theAbhishekBaranwal"
+                  href="https://linkedin.com/in/theAbhishekBaranwal"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <LinkedInLogoIcon className="w-6 h-6 text-blue-700 hover:text-blue-500 transition duration-150" />
                 </a>
                 <a
-                  href="https://twitter.com/itsBaranwal"
+                  href="https://twitter.com/abhicache"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
                 </a>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/abhicache"
                   target="_blank"
                   rel="noreferrer"
                 >
