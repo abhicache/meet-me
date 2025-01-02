@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           {/* Footer */}
+          {/* reorganize the footer component */}
           <footer className="bg-orange-50 py-12">
             <div className="container mx-auto px-6 text-gray-600 flex flex-col md:flex-row justify-between items-center">
               {/* Branding Section */}
