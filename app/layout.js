@@ -8,6 +8,7 @@ import {
   LinkedInLogoIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
+import CreateEventDrawer from "@/components/CreateEvent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -103,6 +104,7 @@ export default function RootLayout({ children }) {
               </p>
             </div>
           </footer>
+          <CreateEventDrawer />
         </body>
       </html>
     </ClerkProvider>
