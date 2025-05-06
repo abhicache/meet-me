@@ -31,6 +31,7 @@ const EventCards = ({ event, username, isPublic=false }) => {
         </Button>
         <Button variant="destructive" >
             <Trash2 className="mr-2 h-4 w-4" /> Delete
+            
         </Button>
       </CardFooter>
       )}
