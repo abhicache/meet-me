@@ -48,3 +48,29 @@ export async function getUserEvents() {
     });
     return { events, username: user.username };
 }
+
+export async function deleteEvent(eventId) {
+    const { userId } = auth();
+    if (!userId) {
+        throw new Error("Not authenticated");
+    }
+
+    const user = await db.user.findUnique({
+        where: { clerkId: userId },
+    });
+    if (!user) {
+        throw new Error("User not found");
+    }
+    const event = await db.event.findUnique({
+        where: { id: eventId },
+
+       
+    });
+    if (!event || event.userId !== user.id) {
+        throw new Error("Event not found or not authorized");
+    }
+    await db.event.delete({
+        where: { id: eventId },
+    });
+    return { success: true };
+}
